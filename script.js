@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Since we're using only dark mode, we can simply remove the theme toggle
     const themeToggleBtn = document.getElementById('theme-toggle');
     if (themeToggleBtn) {
       themeToggleBtn.style.display = 'none';
     }
     
-    // Close mobile menu when clicking a link
     const navLinks = document.querySelectorAll('.nav-link');
     const bsOffcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
     
@@ -64,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const positiveCharges = document.querySelectorAll('.charge.positive');
     const negativeCharges = document.querySelectorAll('.charge.negative');
     
-    // Add pulse animation to charges on hover
+    // pulse animation to charges on hover
     function addChargeInteraction(charges) {
       charges.forEach(charge => {
         charge.addEventListener('mouseenter', function() {
@@ -87,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     addChargeInteraction(positiveCharges);
     addChargeInteraction(negativeCharges);
     
-    // Add interactivity to attraction and repulsion diagrams
+    // interactivity to attraction and repulsion diagrams
     const attractionArrow = document.querySelector('.attraction-arrow');
     const repulsionArrow = document.querySelector('.repulsion-arrow');
     
@@ -124,80 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
           charges[0].style.transform = 'translateX(0)';
           charges[1].style.transform = 'translateX(0)';
         }, 800);
-      });
-    }
-    
-    // Interactive Coulomb's Law formula
-    const formula = document.querySelector('.formula');
-    if (formula) {
-      // Add tooltip-like behavior to formula elements
-      const formulaText = formula.textContent;
-      const formulaPartsMap = {
-        'F': 'Electrostatic Force',
-        'k': 'Coulomb\'s constant (≈ 8.99 × 10^9 N·m²/C²)',
-        'q₁': 'Magnitude of first charge',
-        'q₂': 'Magnitude of second charge',
-        'r': 'Distance between charges',
-        'r²': 'Distance squared (inverse square relationship)'
-      };
-      
-      let newFormulaHTML = 'F = k × (q₁ × q₂) / r²';
-      
-      // Replace each part with a span that has a data attribute
-      Object.keys(formulaPartsMap).forEach(part => {
-        newFormulaHTML = newFormulaHTML.replace(part, `<span class="formula-part" data-description="${formulaPartsMap[part]}">${part}</span>`);
-      });
-      
-      formula.innerHTML = newFormulaHTML;
-      
-      // Create a tooltip element
-      const tooltip = document.createElement('div');
-      tooltip.className = 'formula-tooltip';
-      tooltip.style.position = 'absolute';
-      tooltip.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-      tooltip.style.color = 'white';
-      tooltip.style.padding = '5px 10px';
-      tooltip.style.borderRadius = '5px';
-      tooltip.style.fontSize = '14px';
-      tooltip.style.maxWidth = '200px';
-      tooltip.style.textAlign = 'center';
-      tooltip.style.zIndex = '1000';
-      tooltip.style.display = 'none';
-      tooltip.style.pointerEvents = 'none';
-      document.body.appendChild(tooltip);
-      
-      // Add event listeners to formula parts
-      const formulaPartElements = document.querySelectorAll('.formula-part');
-      formulaPartElements.forEach(part => {
-        part.style.cursor = 'pointer';
-        part.style.fontWeight = 'bold';
-        part.style.transition = 'color 0.3s';
-        
-        part.addEventListener('mouseenter', function(e) {
-          const description = this.getAttribute('data-description');
-          tooltip.textContent = description;
-          tooltip.style.display = 'block';
-          
-          // Position the tooltip
-          const rect = this.getBoundingClientRect();
-          tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
-          tooltip.style.top = rect.bottom + 10 + window.scrollY + 'px';
-          
-          // Highlight the formula part
-          this.style.color = this.textContent === 'k' ? '#dc2626' : 
-                             (this.textContent.includes('q') ? '#3b82f6' : '#10b981');
-        });
-        
-        part.addEventListener('mousemove', function(e) {
-          // Update tooltip position on mouse move to follow cursor more naturally
-          tooltip.style.left = e.pageX - (tooltip.offsetWidth / 2) + 'px';
-          tooltip.style.top = e.pageY + 20 + 'px';
-        });
-        
-        part.addEventListener('mouseleave', function() {
-          tooltip.style.display = 'none';
-          this.style.color = '';
-        });
       });
     }
   });
