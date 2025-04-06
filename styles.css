@@ -857,3 +857,7 @@ a:not(.btn) {
   padding: 10px 16px;
   font-size: 1rem;
 }
+
+.logo-icon {
+  font-size: 20px;
+}
