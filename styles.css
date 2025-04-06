@@ -14,7 +14,6 @@ body {
   scroll-behavior: smooth;
   background-color: #0a1827;
   color: #e0e0e0;
-  overflow: hidden;
 }
 
 h1,
@@ -768,7 +767,7 @@ a:not(.btn) {
   justify-self: center;
   width: 330px;
   color: #3b82f6;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   border-style: solid;
   border-width: 1px;
 }
