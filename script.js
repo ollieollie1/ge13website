@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Smooth scrolling for anchor links
+  // Smooth
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -28,18 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 72, // Adjust for header height
+          top: targetElement.offsetTop - 72,
           behavior: "smooth",
         });
       }
     });
   });
 
-  // Active link highlighting on scroll
+  // Active link highlighting
   const sections = document.querySelectorAll("section[id]");
 
   function highlightNavItem() {
-    let scrollPosition = window.scrollY + 100; // Adding offset
+    let scrollPosition = window.scrollY + 100;
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
@@ -106,13 +106,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Coulomb's constant
     const k = 8.99e9;
 
-    // Calculate force magnitude
+    // force magnitude
     const forceMagnitude = Math.abs((k * charge1 * charge2) / (distance * distance));
 
-    // Determine force direction
+    // force direction
     const forceType = (charge1 * charge2) > 0 ? 'repulsive' : 'attractive';
 
-    // Display results
+    //results
     forceValue.textContent = `Force Magnitude: ${forceMagnitude.toExponential(3)} N`;
     forceDirection.textContent = `The force is ${forceType} (${forceType === 'attractive' ? 'charges attract' : 'charges repel'})`;
     resultDiv.style.display = 'block';
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     attractionArrow.addEventListener("click", function () {
       const charges = this.parentElement.querySelectorAll(".mini-charge");
 
-      // Animate the charges to move closer
+      // Animate charges to move closer
       charges[0].style.transition = "transform 0.5s ease";
       charges[1].style.transition = "transform 0.5s ease";
 
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
     repulsionArrow.addEventListener("click", function () {
       const charges = this.parentElement.querySelectorAll(".mini-charge");
 
-      // Animate the charges to move apart
+      // Animate charges to move apart
       charges[0].style.transition = "transform 0.5s ease";
       charges[1].style.transition = "transform 0.5s ease";
 
@@ -244,6 +244,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Enable retry
   document.getElementById("retryBtn").addEventListener("click", startQuiz);
   
-  // Start it initially
+  // Start initially
   startQuiz();
 });
