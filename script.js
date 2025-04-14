@@ -91,32 +91,27 @@ document.addEventListener("DOMContentLoaded", function () {
   addChargeInteraction(negativeCharges);
 
   // Coulomb's Law Calculator
-  const coulombCalculator = document.getElementById('coulombCalculator');
-  const resultDiv = document.getElementById('result');
-  const forceValue = document.getElementById('forceValue');
-  const forceDirection = document.getElementById('forceDirection');
+const coulombCalculator = document.getElementById('coulombCalculator');
+const resultDiv = document.getElementById('result');
+const forceValue = document.getElementById('forceValue');
+const forceDirection = document.getElementById('forceDirection');
 
-  coulombCalculator.addEventListener('submit', function(e) {
-    e.preventDefault();
+coulombCalculator.addEventListener('submit', function(e) {
+  e.preventDefault();
 
-    const charge1 = parseFloat(document.getElementById('charge1').value);
-    const charge2 = parseFloat(document.getElementById('charge2').value);
-    const distance = parseFloat(document.getElementById('distance').value);
+  const charge1 = parseFloat(document.getElementById('charge1').value);
+  const charge2 = parseFloat(document.getElementById('charge2').value);
+  const distance = parseFloat(document.getElementById('distance').value);
 
-    // Coulomb's constant
-    const k = 8.99e9;
+  const k = 8.99e9;
 
-    // force magnitude
-    const forceMagnitude = Math.abs((k * charge1 * charge2) / (distance * distance));
+  const force = (k * charge1 * charge2) / (distance * distance); // signed force
+  const forceType = force > 0 ? 'repulsive' : 'attractive';
 
-    // force direction
-    const forceType = (charge1 * charge2) > 0 ? 'repulsive' : 'attractive';
-
-    //results
-    forceValue.textContent = `Force Magnitude: ${forceMagnitude.toExponential(3)} N`;
-    forceDirection.textContent = `The force is ${forceType} (${forceType === 'attractive' ? 'charges attract' : 'charges repel'})`;
-    resultDiv.style.display = 'block';
-  });
+  forceValue.textContent = `Force: ${force.toExponential(3)} N`;
+  forceDirection.textContent = `The force is ${forceType} (${forceType === 'attractive' ? 'charges attract' : 'charges repel'})`;
+  resultDiv.style.display = 'block';
+});
 
   // interactivity to attraction and repulsion diagrams
   const attractionArrow = document.querySelector(".attraction-arrow");
