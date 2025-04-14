@@ -91,12 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
   addChargeInteraction(negativeCharges);
 
   // Coulomb's Law Calculator
-const coulombCalculator = document.getElementById('coulombCalculator');
-const resultDiv = document.getElementById('result');
-const forceValue = document.getElementById('forceValue');
-const forceDirection = document.getElementById('forceDirection');
+  const coulombCalculator = document.getElementById('coulombCalculator');
+  const resultDiv = document.getElementById('result');
+  const forceValue = document.getElementById('forceValue');
+  const forceDirection = document.getElementById('forceDirection');
 
-coulombCalculator.addEventListener('submit', function(e) {
+  coulombCalculator.addEventListener('submit', function(e) {
   e.preventDefault();
 
   const charge1 = parseFloat(document.getElementById('charge1').value);
@@ -112,7 +112,7 @@ coulombCalculator.addEventListener('submit', function(e) {
   forceDirection.textContent = `The force is ${forceType} (${forceType === 'attractive' ? 'charges attract' : 'charges repel'})`;
   resultDiv.style.display = 'block';
 });
-
+  
   // interactivity to attraction and repulsion diagrams
   const attractionArrow = document.querySelector(".attraction-arrow");
   const repulsionArrow = document.querySelector(".repulsion-arrow");
