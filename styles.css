@@ -245,7 +245,6 @@ h6 {
   font-size: 0.95rem;
   border-left: 3px solid var(--blue-light);
   text-align: center;
-  font-size: larger;
 }
 
 .formula-container {
@@ -863,4 +862,23 @@ a:not(.btn) {
 
 .logo-icon {
   font-size: 20px;
+}
+
+.fraction {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.fraction .top {
+  display: block;
+}
+
+.fraction .bottom {
+  display: block;
+  border-top: 2px solid #ffffff;
+}
+
+.formula {
+  margin: 0.5em 0;
 }
