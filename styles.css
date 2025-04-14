@@ -189,7 +189,7 @@ h6 {
   padding: 20px;
   margin: 20px 0;
   border-radius: 6px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: monospace;
   text-align: center;
   font-size: 1.8rem;
   font-weight: 600;
@@ -242,7 +242,7 @@ h6 {
   border-radius: 4px;
   margin: 10px 0;
   font-family: monospace;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   border-left: 3px solid var(--blue-light);
   text-align: center;
 }
