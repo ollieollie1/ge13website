@@ -577,7 +577,14 @@
                     </p>
                     
                     <p class="mb-3 fw-bold">Mathematically, it is expressed as:</p>
-                    <div class="formula"><b>\( F = k \frac{q_1 q_2}{r^2} \)</b></div>
+                    <div class="formula">
+                      <b>F = k 
+                        <span class="fraction">
+                          <span class="top">q₁&nbsp;q₂</span>
+                          <span class="bottom">r²</span>
+                        </span>
+                      </b>
+                    </div>
                     <div class="highlight-box mt-4 mb-4">
                       <p class="mb-2 fw-bold">Where:</p>
                       <ul class="mb-0">
@@ -679,43 +686,56 @@
                             <li>
                               <strong>Identify the known values:</strong>
                               <ul>
-                                <li>\( q_1 = +2.0 \times 10^{-6}~\text{C} \)</li>
-                                <li>\( q_2 = -3.0 \times 10^{-6}~\text{C} \)</li>
-                                <li>\( r = 30~\text{cm} = 0.30~\text{m} \)</li>
-                                <li>\( k = 8.99 \times 10^9~\text{N·m}^2/\text{C}^2 \)</li>
+                                <li>q₁ = +2.0 × 10<sup>-6</sup> C</li>
+                                <li>q₂ = -3.0 × 10<sup>-6</sup> C</li>
+                                <li>r = 30 cm = 0.30 m</li>
+                                <li>k = 8.99 × 10<sup>9</sup> N·m²/C²</li>
                               </ul>
                             </li>
                             <li>
                               <strong>Apply Coulomb's Law:</strong>
                               <div class="formula">
-                                \( F = k \cdot \frac{|q_1 \cdot q_2|}{r^2} \)
+                                F = k × 
+                                <span class="fraction">
+                                  <span class="top">|q₁ × q₂|</span>
+                                  <span class="bottom">r²</span>
+                                </span>
                               </div>
                             </li>
                             <li>
                               <strong>Calculate:</strong>
-                              <div class="calculation">
-                                \( F = (8.99 \times 10^9) \cdot \frac{|(2.0 \times 10^{-6}) \cdot (-3.0 \times 10^{-6})|}{(0.30)^2} \)<br><br>
-                                \( F = (8.99 \times 10^9) \cdot \frac{6.0 \times 10^{-12}}{0.09} \)<br><br>
-                                \( F = 5.99 \times 10^{-1}~\text{N} \approx 0.6~\text{N} \)
+                              <div class="formula">
+                                F = (8.99 × 10<sup>9</sup>) × 
+                                <span class="fraction">
+                                  <span class="top">|2.0 × 10<sup>-6</sup> × -3.0 × 10<sup>-6</sup>|</span>
+                                  <span class="bottom">(0.30)²</span>
+                                </span>
+                                <br><br>
+                                F = (8.99 × 10<sup>9</sup>) × 
+                                <span class="fraction">
+                                  <span class="top">-6.0 × 10<sup>-12</sup></span>
+                                  <span class="bottom">0.09</span>
+                                </span>
+                                <br><br>
+                                F = -5.99 × 10<sup>-1</sup> N ≈ -0.6 N
                               </div>
                             </li>
                             <li>
-                              <strong>Determine direction:</strong> Since one charge is positive and the other is negative, the charges will attract each other. The force on each charge points toward the other charge.
+                              <strong>Determine direction:</strong> Since one charge is positive and the other is negative, the force is attractive. Each charge pulls toward the other.
                             </li>
                           </ol>
-                          <p><strong>Answer:</strong> The electrostatic force has a magnitude of 0.6 N and is <strong>attractive</strong> (the charges pull toward each other).</p>
+                          <p><strong>Answer:</strong> The electrostatic force has a magnitude of -0.6 N and is <strong>attractive</strong> (the charges pull toward each other).</p>
                         </div>
                       </div>
                     </div>
                     
-                    <!-- Example 2 -->
                     <div class="card mb-4 problem-box">
                       <div class="card-header example-header">
                         <h5 class="mb-0">Example 2: Finding an Unknown Charge</h5>
                       </div>
                       <div class="card-body">
                         <div class="problem">
-                          <p><strong>Problem:</strong> A charge \( q_1 = +5.0 \times 10^{-9}~\text{C} \) experiences an attractive force of 0.018 N when placed 4.0 cm from another charge \( q_2 \). Calculate the value and sign of charge \( q_2 \).</p>
+                          <p><strong>Problem:</strong> A charge q₁ = +5.0 × 10<sup>-9</sup> C experiences an attractive force of 0.018 N when placed 4.0 cm from another charge q₂. Calculate the value and sign of charge q₂.</p>
                         </div>
                         <div class="solution">
                           <p><strong>Solution:</strong></p>
@@ -723,44 +743,62 @@
                             <li>
                               <strong>Identify the known values:</strong>
                               <ul>
-                                <li>\( q_1 = +5.0 \times 10^{-9}~\text{C} \)</li>
-                                <li>\( F = 0.018~\text{N} \) (attractive)</li>
-                                <li>\( r = 4.0~\text{cm} = 0.040~\text{m} \)</li>
-                                <li>\( k = 8.99 \times 10^9~\text{N·m}^2/\text{C}^2 \)</li>
+                                <li>q₁ = +5.0 × 10<sup>-9</sup> C</li>
+                                <li>F = 0.018 N (attractive)</li>
+                                <li>r = 4.0 cm = 0.040 m</li>
+                                <li>k = 8.99 × 10<sup>9</sup> N·m²/C²</li>
                               </ul>
                             </li>
                             <li>
-                              <strong>Rearrange Coulomb's Law to solve for \( q_2 \):</strong>
+                              <strong>Rearrange Coulomb's Law to solve for q₂:</strong>
                               <div class="formula">
-                                \( q_2 = \frac{F \cdot r^2}{k \cdot q_1} \)
+                                q₂ = 
+                                <span class="fraction">
+                                  <span class="top">F × r²</span>
+                                  <span class="bottom">k × q₁</span>
+                                </span>
                               </div>
                             </li>
                             <li>
                               <strong>Calculate:</strong>
-                              <div class="calculation">
-                                \( q_2 = \frac{0.018 \cdot (0.040)^2}{(8.99 \times 10^9) \cdot (5.0 \times 10^{-9})} \)<br><br>
-                                \( q_2 = \frac{0.018 \cdot 0.0016}{4.495 \times 10^1} \)<br><br>
-                                \( q_2 = \frac{2.88 \times 10^{-5}}{44.95} \)<br><br>
-                                \( q_2 = -6.41 \times 10^{-7}~\text{C} \)
+                              <div class="formula">
+                                q₂ = 
+                                <span class="fraction">
+                                  <span class="top">0.018 × (0.040)²</span>
+                                  <span class="bottom">(8.99 × 10<sup>9</sup>) × (5.0 × 10<sup>-9</sup>)</span>
+                                </span>
+                                <br><br>
+                                q₂ = 
+                                <span class="fraction">
+                                  <span class="top">0.018 × 0.0016</span>
+                                  <span class="bottom">44.95</span>
+                                </span>
+                                <br><br>
+                                q₂ = 
+                                <span class="fraction">
+                                  <span class="top">2.88 × 10<sup>-5</sup></span>
+                                  <span class="bottom">44.95</span>
+                                </span>
+                                <br><br>
+                                q₂ = -6.41 × 10<sup>-7</sup> C
                               </div>
                             </li>
                             <li>
-                              <strong>Determine sign:</strong> Since \( q_1 \) is positive and the force is attractive, \( q_2 \) must be negative.
+                              <strong>Determine sign:</strong> Since q₁ is positive and the force is attractive, q₂ must be negative.
                             </li>
                           </ol>
-                          <p><strong>Answer:</strong> The charge \( q_2 \) is \( -6.4 \times 10^{-7}~\text{C} \) (negative).</p>
+                          <p><strong>Answer:</strong> The charge q₂ is <strong>-6.4 × 10<sup>-7</sup> C</strong> (negative).</p>
                         </div>
                       </div>
                     </div>
                     
-                    <!-- Example 3 -->
                     <div class="card mb-4 problem-box">
                       <div class="card-header example-header">
                         <h5 class="mb-0">Example 3: Multiple Charge System</h5>
                       </div>
                       <div class="card-body">
                         <div class="problem">
-                          <p><strong>Problem:</strong> Three point charges are placed in a straight line. Charge \( q_1 = +3.0 \times 10^{-6} \, \text{C} \) is at \( x = 0 \, \text{m} \), charge \( q_2 = -2.0 \times 10^{-6} \, \text{C} \) is at \( x = 0.10 \, \text{m} \), and charge \( q_3 = +4.0 \times 10^{-6} \, \text{C} \) is at \( x = 0.30 \, \text{m} \). Calculate the magnitude and direction of the net force on \( q_3 \).</p>
+                          <p><strong>Problem:</strong> Three point charges are placed in a straight line. Charge q₁ = +3.0 × 10<sup>-6</sup> C is at x = 0 m, charge q₂ = -2.0 × 10<sup>-6</sup> C is at x = 0.10 m, and charge q₃ = +4.0 × 10<sup>-6</sup> C is at x = 0.30 m. Calculate the magnitude and direction of the net force on q₃.</p>
                         </div>
                         <div class="solution">
                           <p><strong>Solution:</strong></p>
@@ -768,37 +806,47 @@
                             <li>
                               <strong>Identify the known values:</strong>
                               <ul>
-                                <li>\( q_1 = +3.0 \times 10^{-6} \, \text{C} \) at \( x = 0 \, \text{m} \)</li>
-                                <li>\( q_2 = -2.0 \times 10^{-6} \, \text{C} \) at \( x = 0.10 \, \text{m} \)</li>
-                                <li>\( q_3 = +4.0 \times 10^{-6} \, \text{C} \) at \( x = 0.30 \, \text{m} \)</li>
-                                <li>\( k = 8.99 \times 10^9 \, \text{N·m}^2/\text{C}^2 \)</li>
+                                <li>q₁ = +3.0 × 10<sup>-6</sup> C at x = 0 m</li>
+                                <li>q₂ = -2.0 × 10<sup>-6</sup> C at x = 0.10 m</li>
+                                <li>q₃ = +4.0 × 10<sup>-6</sup> C at x = 0.30 m</li>
+                                <li>k = 8.99 × 10<sup>9</sup> N·m²/C²</li>
                               </ul>
                             </li>
                             <li>
-                              <strong>Calculate the force from \( q_1 \) on \( q_3 \):</strong>
+                              <strong>Calculate the force from q₁ on q₃:</strong>
                               <div class="calculation">
-                                \( r_{1} = 0.30 \, \text{m} \)<br><br>
-                                \( F_{1} = k \frac{|q_1 q_3|}{r_{1}^2} = \frac{(8.99 \times 10^9)(3.0 \times 10^{-6})(4.0 \times 10^{-6})}{(0.30)^2} \)<br><br>
-                                \( F_{1} = 1.20 \, \text{N} \) (repulsive, since both charges are positive)
+                                r₁ = 0.30 m<br><br>
+                                F₁ = 
+                                <span class="fraction">
+                                  <span class="top">(8.99 × 10<sup>9</sup>)(3.0 × 10<sup>-6</sup>)(4.0 × 10<sup>-6</sup>)</span>
+                                  <span class="bottom">(0.30)²</span>
+                                </span>
+                                <br><br>
+                                F₁ = 1.20 N (repulsive, since both charges are positive)
                               </div>
                             </li>
                             <li>
-                              <strong>Calculate the force from \( q_2 \) on \( q_3 \):</strong>
+                              <strong>Calculate the force from q₂ on q₃:</strong>
                               <div class="calculation">
-                                \( r_{2} = 0.20 \, \text{m} \)<br><br>
-                                \( F_{2} = k \frac{|q_2 q_3|}{r_{2}^2} = \frac{(8.99 \times 10^9)(2.0 \times 10^{-6})(4.0 \times 10^{-6})}{(0.20)^2} \)<br><br>
-                                \( F_{2} = 1.80 \, \text{N} \) (attractive, since \( q_2 \) is negative and \( q_3 \) is positive)
+                                r₂ = 0.20 m<br><br>
+                                F₂ = 
+                                <span class="fraction">
+                                  <span class="top">(8.99 × 10<sup>9</sup>)(2.0 × 10<sup>-6</sup>)(4.0 × 10<sup>-6</sup>)</span>
+                                  <span class="bottom">(0.20)²</span>
+                                </span>
+                                <br><br>
+                                F₂ = 1.80 N (attractive, since q₂ is negative and q₃ is positive)
                               </div>
                             </li>
                             <li>
                               <strong>Determine the net force:</strong>
-                              <p>Since both forces act along the same line, we add them considering their directions. The force \( F_{1} \) pushes \( q_3 \) to the right (positive x-direction), while \( F_{2} \) pulls \( q_3 \) to the left (negative x-direction).</p>
+                              <p>Since both forces act along the same line, we add them considering their directions. The force F₁ pushes q₃ to the right (positive x-direction), while F₂ pulls q₃ to the left (negative x-direction).</p>
                               <div class="calculation">
-                                \( F_{\text{net}} = F_{1} - F_{2} = 1.20 \, \text{N} - 1.80 \, \text{N} = -0.60 \, \text{N} \)
+                                F<sub>net</sub> = F₁ - F₂ = 1.20 N - 1.80 N = -0.60 N
                               </div>
                             </li>
                           </ol>
-                          <p><strong>Answer:</strong> The net force on \( q_3 \) has a magnitude of \( 0.60 \, \text{N} \) and points to the left (negative x-direction).</p>
+                          <p><strong>Answer:</strong> The net force on q₃ has a magnitude of <strong>0.60 N</strong> and points to the left (negative x-direction).</p>
                         </div>
                       </div>
                     </div>
@@ -1458,9 +1506,5 @@
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </body>
 </html>
